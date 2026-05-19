@@ -547,7 +547,7 @@ deploy-cert-manager: ## Deploy cert-manager to the K8s cluster
 	@if ! $(HELM) upgrade --install cert-manager jetstack/cert-manager \
 		--namespace cert-manager \
 		--create-namespace \
-		--version v1.19.3 \
+		--version v1.20.2 \
 		--set crds.enabled=true \
 		--kubeconfig=${TEST_KUBECONFIG_LOCATION} \
 		--wait --timeout=180s; then \
